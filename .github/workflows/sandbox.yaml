@@ -1,0 +1,14 @@
+name: Sandbox
+on:
+  workflow_dispatch:
+  
+jobs:
+  # Get the current step to only run the main job when the learner is on the same step.
+  get_current_step:
+    runs-on: ubuntu-latest
+    steps:
+      # We'll need to check out the repository so that we can edit the README.
+      - name: Checkout
+        uses: actions/checkout@v3
+
+    
